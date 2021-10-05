@@ -1,0 +1,28 @@
+<div class='mt5'>
+  <ul class='nav nav-tabs' role='tablist'>
+    <li class='nav-item'>
+      <ul class='nav-link active' data-toggle='tab'>Lista de Alunos</ul>
+    </li>
+
+  </ul>
+
+  <!--Conteudo da tabela com os dados dos alunos-->
+  <div class='tab-content'>
+    <div id='lista-title' class='container'><br>
+    <h4><B>Agenda</B></h4>
+   <table class='table table-striped'>
+     <thead>
+       <tr><td><B>Nome</B></td><td><B>RU</B></td><td><B>Curso</B></td><td><B>Data Nascimento</B></td></tr>        
+     </thead>
+     <tbody>
+       <ng-container *ngFor="let aluno of lista_alunos"> <!--laco de repeticao ngFor para mostrar dados-->
+         <tr><td>{{aluno.nome}}</td>
+          <td>{{aluno.ru}}</td>
+          <td>{{aluno.curso}}</td>
+          <td>{{aluno.data_nasc}}</td></tr>
+       </ng-container>
+     </tbody>
+   </table>
+  </div>      
+
+</div>
